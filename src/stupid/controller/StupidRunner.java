@@ -6,6 +6,7 @@ public class StupidRunner
 	{
 		StupidController firstAppController = new StupidController();
 		firstAppController.start();
-		firstAppController.age(1999);
+		
+
 	}
 }

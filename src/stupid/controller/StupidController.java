@@ -1,13 +1,17 @@
 package stupid.controller;
 
+import java.util.Scanner;
+
 public class StupidController
 {
 
 	private String myName;
+	private Scanner inputReader;
 
 	public StupidController()
 	{
 		myName = "Aaron Farr";
+		inputReader = new Scanner(System.in);
 
 	}
 
@@ -16,12 +20,15 @@ public class StupidController
 
 		System.out.println("Who is the Meme Master?");
 		System.out.println(myName);
+		age();
 	}
 
-	public void age(int y)
+	public void age()
 	{
-		y = 2016 - y;
-		System.out.println("Your age is " + y);
+		System.out.println("What year were you born?");
+		int input = inputReader.nextInt();
+		input = 2016 - input;
+		System.out.println("Your age is " + input);
 
 	}
 
