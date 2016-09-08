@@ -27,8 +27,16 @@ public class StupidController
 	{
 		System.out.println("What year were you born?");
 		int input = inputReader.nextInt();
-		input = 2016 - input;
-		System.out.println("Your age is " + input);
+		if (input > 1916 && input < 2017)
+		{
+			input = 2016 - input;
+			System.out.println("Your age is " + input);
+		}
+		else{
+			System.out.println("That is not a valid year");
+			age();
+		}
+		
 
 	}
 
