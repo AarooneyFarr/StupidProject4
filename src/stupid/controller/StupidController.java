@@ -1,16 +1,28 @@
 package stupid.controller;
 
-public class StupidController {
-	
+public class StupidController
+{
+
 	private String myName;
-	
-	public StupidController(){
+
+	public StupidController()
+	{
 		myName = "Aaron Farr";
-		
+
 	}
-   public void start(){
-	  
-	   System.out.println("Who is the Meme Master?");
-	   System.out.println(myName);
-   }
+
+	public void start()
+	{
+
+		System.out.println("Who is the Meme Master?");
+		System.out.println(myName);
+	}
+
+	public void age(int y)
+	{
+		y = 2016 - y;
+		System.out.println("Your age is " + y);
+
+	}
+
 }
