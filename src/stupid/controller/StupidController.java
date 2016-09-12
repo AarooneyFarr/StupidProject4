@@ -75,6 +75,10 @@ public class StupidController
 			input = 2016 - input;
 			System.out.println("Your age is " + input);
 		}
+		else if(input <= currentYear - 100 && input >= currentYear - 120){
+			input = 2016 - input;
+			System.out.println("You are really old! Your age is " + input);
+		}
 		else
 		{
 			System.out.println("You are lying!");
