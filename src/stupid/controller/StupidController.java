@@ -8,12 +8,10 @@ public class StupidController
 	private String myName;
 	private Scanner inputReader;
 
-
 	public StupidController()
 	{
 		myName = "Aaron Farr";
 		inputReader = new Scanner(System.in);
-		hasBirthday = true;
 
 	}
 
@@ -71,12 +69,12 @@ public class StupidController
 	public void age(int currentYear)
 	{
 		boolean hasBirthday;
-		
+
 		System.out.println("Have you had your birthday already this year?");
 		String ageCheck = inputReader.nextLine();
 		if (ageCheck == "yes")
 		{
-			 hasBirthday = true;
+			hasBirthday = true;
 		}
 		else
 		{
@@ -85,33 +83,28 @@ public class StupidController
 
 		System.out.println("What year were you born?");
 		int input = inputReader.nextInt();
-		if (input > currentYear - 100 && input < currentYear + 1)
+		if (input > currentYear - 100 && input < currentYear + 1 && hasBirthday == true)
 		{
-			if (hasBirthday == true)
-			{
-				input = currentYear - input;
-				System.out.println("Your age is " + input);
-			}
-			else
-			{
-				input = (currentYear - 1) - input;
-				System.out.println("Your age is " + input);
-			}
-		}
-		else if (input <= currentYear - 100 && input >= currentYear - 120)
-		{
-			if (hasBirthday == true)
-			{
-				input = currentYear - input;
-				System.out.println("You are really old! Your age is " + input);
-			}
-			else
-			{
-				input = (currentYear - 1) - input;
-				System.out.println("You are really old! Your age is " + input);
-			}
 			input = currentYear - input;
+			System.out.println("Your age is " + input);
 
+		}
+		else if (input > currentYear - 100 && input < currentYear + 1 && hasBirthday == false)
+		{
+			input = (currentYear - 1) - input;
+			System.out.println("Your age is " + input);
+		}
+		else if (input <= currentYear - 100 && input >= currentYear - 120 && hasBirthday == true)
+		{
+
+			input = currentYear - input;
+			System.out.println("You are really old! Your age is " + input);
+
+		}
+		else if (input <= currentYear - 100 && input >= currentYear - 120 && hasBirthday == false)
+		{
+			input = (currentYear - 1) - input;
+			System.out.println("You are really old! Your age is " + input);
 		}
 		else
 		{
