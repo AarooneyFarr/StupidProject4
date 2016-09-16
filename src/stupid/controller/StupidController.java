@@ -71,8 +71,8 @@ public class StupidController
 		boolean hasBirthday;
 
 		System.out.println("Have you had your birthday already this year?");
-		String ageCheck = inputReader.nextLine();
-		if (ageCheck == "yes")
+		String ageCheck = inputReader.next(); 
+		if (ageCheck.equalsIgnoreCase("yes"))
 		{
 			hasBirthday = true;
 		}
@@ -80,6 +80,8 @@ public class StupidController
 		{
 			hasBirthday = false;
 		}
+		inputReader.nextLine(); // Used to consume unneeded input
+
 
 		System.out.println("What year were you born?");
 		int input = inputReader.nextInt();
